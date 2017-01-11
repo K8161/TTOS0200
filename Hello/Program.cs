@@ -17,7 +17,8 @@ namespace Hello
         static void Main(string[] args)
         {
             //SayHello();
-            ShowNames();
+            //ShowNames();
+            Harjoitus5();
         }
 
         static void ShowNames()
@@ -58,6 +59,140 @@ namespace Hello
             Console.WriteLine("Terve: {0} ikäsi on: {1}", hlo.Nimi, hlo.Ika);
             //pidetään sovelluksen ajoikkuna auki
             Console.ReadLine();
+        }
+
+        /* Harjoitus 1, ohjelma tulostaa käyttäjän antaman luvun sanana. */
+
+        static void Harjoitus1()
+        { int luku;
+
+            Console.WriteLine("Anna luku: ");
+            luku = int.Parse(Console.ReadLine());
+
+            if (luku == 1)
+            {
+                Console.WriteLine("Annoit luvun yksi."); 
+             }
+            else if (luku == 2)
+            {
+                Console.WriteLine("Annoit luvun kaksi.");
+            }
+
+            else if (luku == 3)
+            {
+                Console.WriteLine("Annoit luvun kolme.");
+            }
+
+            else 
+            {
+                Console.WriteLine("Annoit jonkin muun luvun.");
+            }
+        }
+
+/* Harjoitus 2, ohjelma antaa oppilaalle koulunumeron pisteiden mukaan. */
+
+        static void Harjoitus2()
+        {
+            int luku;
+
+            Console.WriteLine("Anna pistemäärä: ");
+            luku = int.Parse(Console.ReadLine());
+
+            if (luku < 2)
+            {
+                Console.WriteLine("Arvosanasi on 0.");
+            }
+            else if (luku < 4)
+            {
+                Console.WriteLine("Arvosanasi on 1.");
+            }
+
+            else if (luku < 6)
+            {
+                Console.WriteLine("Arvosanasi on 2.");
+            }
+
+            else if (luku < 8)
+            {
+                Console.WriteLine("Arvosanasi on 3.");
+            }
+
+            else if (luku < 10)
+            {
+                Console.WriteLine("Arvosanasi on 4.");
+            }
+
+            else if (luku == 10 && luku < 12)
+            {
+                Console.WriteLine("Arvosanasi on 5.");
+            }
+
+            else
+            {
+                Console.WriteLine("Pistemäärä ei kelpaa");
+            }
+        }
+
+        /* Harjoitus 3, ohjelma kysyy kolme lukua ja tulostaa näiden summan ja keskiarvon */
+
+        static void Harjoitus3()
+        {
+            int[] luvut = new int[3];
+            int i, summa, keskiarvo;
+            int maara = 1;
+           
+
+            for (i = 0; i < 3; i++)
+            { Console.WriteLine("Anna luku " + maara);
+            luvut[i] = int.Parse(Console.ReadLine());
+                maara++;
+            }
+
+            summa = luvut[0] + luvut[1] + luvut[2];
+            keskiarvo = summa / 3;
+
+            Console.WriteLine("Antamiesi lukujen summa on: " + summa);
+            Console.WriteLine("Antamiesi lukujen keskiarvo on: " + keskiarvo);
+        }
+
+        /* Harjoitus 4, ohjelma kysyy käyttäjän iän ja tulostaa vastauksen sen mukaan. */
+
+        static void Harjoitus4()
+        {
+            int ika;
+
+            Console.WriteLine("Anna ikäsi: ");
+            ika = int.Parse(Console.ReadLine());
+
+            if (ika < 18)
+            {
+                Console.WriteLine("Alaikäban.");
+            }
+            else if (ika > 18 && ika < 65)
+            {
+                Console.WriteLine("Aikuinen");
+            }
+
+            else
+            {
+                Console.WriteLine("Seniori");
+            }
+        }
+
+        /* Harjoitus 5, ohjelma kysyy sekuntimäärän ja ilmoittaa sen tunteina, minuutteina ja sekunteina */
+
+        static void Harjoitus5()
+        {
+            int sekunnit, minuutit, tunnit, apu;
+            
+                Console.WriteLine("Anna sekunnit: ");
+                apu = int.Parse(Console.ReadLine());
+                tunnit = apu / 60 / 60;
+                minuutit = apu / 60 - tunnit * 60;
+                sekunnit = apu - minuutit * 60 - tunnit * 60;  
+            
+
+            Console.WriteLine("Antamasi aika voidaan ilmaista muodossa: " + tunnit + " tuntia " + minuutit + " minuuttia " + sekunnit + " sekuntia.");
         }
     }
 }
