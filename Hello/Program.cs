@@ -3,7 +3,7 @@
  * Taulukko
  * 9.1.2017 */
 namespace Hello
-{
+{ //testikommentti
     class Henkilo
     {
         public string Nimi { get; set; }
