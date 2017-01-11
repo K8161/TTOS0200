@@ -2,8 +2,10 @@
 /*
  * Taulukko
  * 9.1.2017 */
+//testikommentti
+// Toinen muutos kommenttiin
 namespace Hello
-{ //testikommentti
+{ 
     class Henkilo
     {
         public string Nimi { get; set; }
