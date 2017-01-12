@@ -18,7 +18,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus6();
+            Harjoitus7();
         }
 
         static void ShowNames()
@@ -209,6 +209,23 @@ namespace Hello
 
 
             Console.WriteLine("Bensaa kuluu: " + polttoaine + " litraa, kustannus " + hinta + " euroa.");
+        }
+
+        /* Harjoitus 7, ohjelma kysyy vuosiluvun ja tarkistaa onko kyseessä karkausvuosi */
+
+        static void Harjoitus7()
+        {
+            int vuosi;
+
+            Console.WriteLine("Anna vuosi: ");
+            vuosi = int.Parse(Console.ReadLine());
+
+            if (DateTime.IsLeapYear(vuosi))
+                Console.WriteLine(vuosi + " on karkausvuosi.");
+
+            else
+                Console.WriteLine(vuosi + " ei ole karkausvuosi.");
+
         }
     }
 }
