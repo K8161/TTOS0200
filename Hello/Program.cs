@@ -18,7 +18,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus7();
+            Harjoitus8();
         }
 
         static void ShowNames()
@@ -226,6 +226,27 @@ namespace Hello
             else
                 Console.WriteLine(vuosi + " ei ole karkausvuosi.");
 
+        }
+
+        /* Harjoitus 8, ohjelma kysyy kolme lukua ja näyttää niistä suurimman */
+
+        static void Harjoitus8()
+        {
+           
+            int[] luvut = new int[3]; 
+
+
+            for (int i = 0; i < luvut.Length; i++) 
+            {
+                Console.WriteLine("Anna luku:");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+                        
+            Console.WriteLine("Suurin antamasi luku:");
+            Array.Sort(luvut); //sortataan nimet
+            
+            Console.WriteLine(luvut[2]);
+            
         }
     }
 }
