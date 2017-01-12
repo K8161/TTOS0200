@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus10();
+            Harjoitus12();
         }
 
         static void ShowNames()
@@ -249,13 +249,13 @@ namespace Hello
             }
 
             Console.WriteLine("Suurin antamasi luku:");
-            Array.Sort(luvut); //sortataan nimet
+            Array.Sort(luvut); //sortataan luvut
 
             Console.WriteLine(luvut[2]);
 
         }
 
-        /* Harjoitus 9, ohjelma kysyy kolme lukua ja näyttää niistä suurimman */
+        /* Harjoitus 9, ohjelma kysyy lukuja kunnes käyttäjä syöttää nollan ja tulostaa lopuksi lukujen summan */
 
         static void Harjoitus9()
         {
@@ -265,7 +265,7 @@ namespace Hello
             int x = 1;
 
 
-            for (i = 0; x != 0; i++) // kysytään nimet ja tallennetaan ne taulukkoon
+            for (i = 0; x != 0; i++) 
             {
                 Console.WriteLine("Anna luku:");
                 x = int.Parse(Console.ReadLine());
@@ -277,7 +277,7 @@ namespace Hello
             Console.WriteLine("Lukujen summa on: " + sum);
         }
 
-        /* Harjoitus 10, ohjelma kysyy kolme lukua ja näyttää niistä suurimman */
+        /* Harjoitus 10, ohjelma näyttää onko luku parillinen */
 
         static void Harjoitus10()
         {
@@ -289,14 +289,63 @@ namespace Hello
             {
                 if (IsOdd(i))
                 {
-                    Console.WriteLine(luvut[i] + "HEP");
+                    Console.WriteLine(luvut[i] + " HEP");
                 }
             }
         }
-
+                
         static bool IsOdd(int value)
         {
             return value % 2 != 0;
+        }
+
+        /* Harjoitus 11, ohjelma kysyy luvun ja tulostaa sen mukaan *-merkkejä */
+
+        static void Harjoitus11()
+        {
+            int rivinro, sarakenro, luku;
+
+            Console.WriteLine("Syötä luku väliltä 1-9: ");
+            luku = int.Parse(Console.ReadLine());
+
+            for (rivinro = 1; rivinro <= luku; rivinro++)
+            {
+
+                for (sarakenro = 1; sarakenro <= rivinro; sarakenro++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        /* Harjoitus 12, ohjelma kysyy 5 lukua ja tulostaa ne käänteisessä järjestyksessä */
+
+        static void Harjoitus12()
+        {
+
+            int[] luvut = new int[5];
+            int i;
+
+
+            for (i = 0; i < luvut.Length; i++)
+            {
+                Console.WriteLine("Anna luku:");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Reverse(luvut);
+
+            for (i = 0; i < 5; i++)
+            {
+                if (i < 4)
+                    //   cout << lottorivi[i] << endl;
+                    Console.Write(luvut[i] + ", ");
+
+                else
+                    Console.Write(luvut[i] + "\n\n");
+
+            }
         }
     }
 }
