@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus12();
+            Harjoitus13();
         }
 
         static void ShowNames()
@@ -346,6 +346,29 @@ namespace Hello
                     Console.Write(luvut[i] + "\n\n");
 
             }
+        }
+
+        /* Harjoitus 13, ohjelma kysyy arvostelupisteet hypylle ja tulostaa pisteiden summan siten, että summasta on vähennetty pienin ja suurin tyylipiste */
+
+        static void Harjoitus13()
+        {
+
+            int[] pisteet = new int[5];
+            int sum;
+
+
+            for (int i = 0; i < pisteet.Length; i++)
+            {
+                Console.Write("Anna luku:");
+                pisteet[i] = int.Parse(Console.ReadLine());
+            }
+                        
+            Array.Sort(pisteet); //sortataan luvut
+            sum = pisteet.Sum(); //lasketaan pisteet yhteen
+            sum = sum - pisteet[0] - pisteet[4]; //miinustetaan pisteistä suurin ja pienin pistemäärä
+                      
+            Console.WriteLine("Kokonaispisteet ovat: " + sum);
+            
         }
     }
 }
