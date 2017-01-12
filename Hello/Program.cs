@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus13();
+            Harjoitus15();
         }
 
         static void ShowNames()
@@ -370,5 +370,57 @@ namespace Hello
             Console.WriteLine("Kokonaispisteet ovat: " + sum);
             
         }
+
+        /* Harjoitus 14, ohjelma kysyy arvosanat ja näyttää montako kpl tuli mitäkin arvosanaa */
+
+     /*   static void Harjoitus14()
+        {
+
+            int[] arvosanat = new int[10];
+            List<Part> parts = new List<Part>();
+
+
+            for (int i = 0; i < arvosanat.Length; i++)
+            {
+                Console.Write("Syötä arvosana 0-5:");
+                arvosanat[i] = int.Parse(Console.ReadLine());
+            }
+
+            foreach (int luku in arvosanat)
+            {
+                if (luku == 0)
+                    
+            }
+        } */
+
+        /* Harjoitus 15, ohjelma kysyy luvun ja tulostaa sen mukaan *-merkkejä */
+
+        static void Harjoitus15()
+        {
+            int rivinro, sarakenro, luku;
+
+            Console.WriteLine("Syötä luku väliltä 1-9: ");
+            luku = int.Parse(Console.ReadLine());
+
+            for (rivinro = 0; rivinro < luku; rivinro++)
+            {
+
+                for (sarakenro = 0; sarakenro < luku-rivinro-1; sarakenro++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int y = 0; y < rivinro * 2 + 1; y++)
+                {
+
+                    Console.Write("*");
+                    
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine(new String(' ', luku - 1) + "*");
+            Console.WriteLine(new String(' ', luku - 1) + "*");
+        }
+
     }
 }
