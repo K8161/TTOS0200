@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 /*
  * Taulukko
  * 9.1.2017 */
@@ -18,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus8();
+            Harjoitus10();
         }
 
         static void ShowNames()
@@ -35,10 +39,10 @@ namespace Hello
                 nimet[i] = Console.ReadLine();
             }
 
-      /*      for (int i = 0; i < nimet.Length; i++) // näytetään nimet
-            {
-                Console.WriteLine(nimet[i]);
-            } */
+            /*      for (int i = 0; i < nimet.Length; i++) // näytetään nimet
+                  {
+                      Console.WriteLine(nimet[i]);
+                  } */
 
             Console.WriteLine("Annetut nimet aakkosjärjestyksessä:");
             Array.Sort(nimet); //sortataan nimet
@@ -64,15 +68,16 @@ namespace Hello
         /* Harjoitus 1, ohjelma tulostaa käyttäjän antaman luvun sanana. */
 
         static void Harjoitus1()
-        { int luku;
+        {
+            int luku;
 
             Console.WriteLine("Anna luku: ");
             luku = int.Parse(Console.ReadLine());
 
             if (luku == 1)
             {
-                Console.WriteLine("Annoit luvun yksi."); 
-             }
+                Console.WriteLine("Annoit luvun yksi.");
+            }
             else if (luku == 2)
             {
                 Console.WriteLine("Annoit luvun kaksi.");
@@ -83,13 +88,13 @@ namespace Hello
                 Console.WriteLine("Annoit luvun kolme.");
             }
 
-            else 
+            else
             {
                 Console.WriteLine("Annoit jonkin muun luvun.");
             }
         }
 
-/* Harjoitus 2, ohjelma antaa oppilaalle koulunumeron pisteiden mukaan. */
+        /* Harjoitus 2, ohjelma antaa oppilaalle koulunumeron pisteiden mukaan. */
 
         static void Harjoitus2()
         {
@@ -140,11 +145,12 @@ namespace Hello
             int[] luvut = new int[3];
             int i, summa, keskiarvo;
             int maara = 1;
-           
+
 
             for (i = 0; i < 3; i++)
-            { Console.WriteLine("Anna luku " + maara);
-            luvut[i] = int.Parse(Console.ReadLine());
+            {
+                Console.WriteLine("Anna luku " + maara);
+                luvut[i] = int.Parse(Console.ReadLine());
                 maara++;
             }
 
@@ -184,13 +190,13 @@ namespace Hello
         static void Harjoitus5()
         {
             int sekunnit, minuutit, tunnit, apu;
-            
-                Console.WriteLine("Anna sekunnit: ");
-                apu = int.Parse(Console.ReadLine());
-                tunnit = apu / 60 / 60;
-                minuutit = apu / 60 - tunnit * 60;
-                sekunnit = apu - minuutit * 60 - tunnit * 60;  
-            
+
+            Console.WriteLine("Anna sekunnit: ");
+            apu = int.Parse(Console.ReadLine());
+            tunnit = apu / 60 / 60;
+            minuutit = apu / 60 - tunnit * 60;
+            sekunnit = apu - minuutit * 60 - tunnit * 60;
+
 
             Console.WriteLine("Antamasi aika voidaan ilmaista muodossa: " + tunnit + " tuntia " + minuutit + " minuuttia " + sekunnit + " sekuntia.");
         }
@@ -232,21 +238,65 @@ namespace Hello
 
         static void Harjoitus8()
         {
-           
-            int[] luvut = new int[3]; 
+
+            int[] luvut = new int[3];
 
 
-            for (int i = 0; i < luvut.Length; i++) 
+            for (int i = 0; i < luvut.Length; i++)
             {
                 Console.WriteLine("Anna luku:");
                 luvut[i] = int.Parse(Console.ReadLine());
             }
-                        
+
             Console.WriteLine("Suurin antamasi luku:");
             Array.Sort(luvut); //sortataan nimet
-            
+
             Console.WriteLine(luvut[2]);
+
+        }
+
+        /* Harjoitus 9, ohjelma kysyy kolme lukua ja näyttää niistä suurimman */
+
+        static void Harjoitus9()
+        {
+
+            int[] luvut = new int[12];
+            int i, sum;
+            int x = 1;
+
+
+            for (i = 0; x != 0; i++) // kysytään nimet ja tallennetaan ne taulukkoon
+            {
+                Console.WriteLine("Anna luku:");
+                x = int.Parse(Console.ReadLine());
+                luvut[i] = x;
+            }
+
+            sum = luvut.Sum();
+
+            Console.WriteLine("Lukujen summa on: " + sum);
+        }
+
+        /* Harjoitus 10, ohjelma kysyy kolme lukua ja näyttää niistä suurimman */
+
+        static void Harjoitus10()
+        {
+
+            int[] luvut = { 1,2,33,44,55,68,77,96,100 };
+            int i;
             
+            for (i = 0; i < luvut.Length; i++)
+            {
+                if (IsOdd(i))
+                {
+                    Console.WriteLine(luvut[i] + "HEP");
+                }
+            }
+        }
+
+        static bool IsOdd(int value)
+        {
+            return value % 2 != 0;
         }
     }
 }
