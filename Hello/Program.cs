@@ -18,7 +18,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus5();
+            Harjoitus6();
         }
 
         static void ShowNames()
@@ -193,6 +193,22 @@ namespace Hello
             
 
             Console.WriteLine("Antamasi aika voidaan ilmaista muodossa: " + tunnit + " tuntia " + minuutit + " minuuttia " + sekunnit + " sekuntia.");
+        }
+
+        /* Harjoitus 6, ohjelma kysyy ajomatkan kilometreinä ja kertoo paljonko tähän kuluu polttoainetta ja rahaa */
+
+        static void Harjoitus6()
+        {
+            int matka;
+            double polttoaine, hinta;
+
+            Console.WriteLine("Anna matka: ");
+            matka = int.Parse(Console.ReadLine());
+            polttoaine = matka * 0.0702;
+            hinta = polttoaine * 1.595;
+
+
+            Console.WriteLine("Bensaa kuluu: " + polttoaine + " litraa, kustannus " + hinta + " euroa.");
         }
     }
 }
