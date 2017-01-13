@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus15();
+            Harjoitus17();
         }
 
         static void ShowNames()
@@ -422,5 +422,102 @@ namespace Hello
             Console.WriteLine(new String(' ', luku - 1) + "*");
         }
 
-    }
+        /* Harjoitus 16, arpoo satunnaisluvun väliltä 0-100 ja käyttäjä yrittää arvata lukua vihjeiden avulla */
+
+        static void Harjoitus16()
+        {
+            int luku, arvaus;
+            Random rand = new Random();
+
+            luku = rand.Next(0, 100);
+
+            do
+            {
+                Console.WriteLine("Arvaa luku väliltä 0-100: ");
+                arvaus = Convert.ToInt32(Console.ReadLine());
+
+                if (arvaus > luku)
+                    Console.WriteLine("Luku on pienempi.");
+
+                else if (arvaus < luku)
+                    Console.WriteLine("Luku on suurempi.");
+
+                else if (arvaus == luku)
+                    Console.WriteLine("Onnittelut! Arvasit oikein, luku oli " + luku);
+
+            } while (arvaus != luku);
+            
+        }
+
+        /* Harjoitus 17, ohjelma kysyy kaksi eri lukujonoa ja tulostaa ne kolmanteen jonoon suuruusjärjestyksessä */
+
+        static void Harjoitus17()
+        {
+
+            int[] luvut1 = new int[5];
+            int[] luvut2 = new int[5];
+            int[] luvut3 = new int[10];
+            int i, j = 0;
+
+
+            for (i = 0; i < luvut1.Length; i++)
+            {
+                Console.WriteLine("Anna luku jonoon 1:");
+                luvut1[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (i = 0; i < luvut2.Length; i++)
+            {
+                Console.WriteLine("Anna luku jonoon 2:");
+                luvut2[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (i = 0; i < luvut1.Length; i++)
+            {
+                luvut3[j] = luvut1[i];
+                j++;
+            }
+
+
+            for (i = 0; i < luvut2.Length; i++)
+            {
+                luvut3[j] = luvut2[i];
+                j++;
+            }
+                        
+            Array.Sort(luvut3); //sortataan luvut
+
+            Console.Write("Antamasi numerot suuruusjärjestyksessä: ");
+            for (i = 0; i < 10; i++)
+            {
+                if (i <= 8)
+                    //   cout << lottorivi[i] << endl;
+                    Console.Write(luvut3[i] + ", ");
+
+                else
+                    Console.Write(luvut3[i] + "\n\n");
+            }
+
+        }
+
+        /* Harjoitus 18, tarkistaa onko käyttäjän merkkijono palindromi. */
+
+        static void Harjoitus18()
+        {
+            string mjono; // muistipaikka merkkijonolle, 100 merkkiä + NULL
+           
+            Console.WriteLine("Anna merkkijono tarkistaaksesi onko se palindromi: ");
+            mjono = Console.ReadLine();
+
+            if (mjono.SequenceEqual(mjono.Reverse()))
+                { Console.WriteLine(mjono + " on palindromi.");
+                }
+
+            else
+                { Console.WriteLine(mjono + " ei ole palindromi.");
+                }
+
+           
+        }
+        }
 }
