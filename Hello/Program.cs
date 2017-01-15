@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //testikommentti
 // Toinen muutos kommenttiin
 namespace Hello
-{ 
+{
     class Henkilo
     {
         public string Nimi { get; set; }
@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus17();
+            Harjoitus5();
         }
 
         static void ShowNames()
@@ -189,13 +189,14 @@ namespace Hello
 
         static void Harjoitus5()
         {
-            int sekunnit, minuutit, tunnit, apu;
+            int sekunnit, minuutit, tunnit;
 
             Console.WriteLine("Anna sekunnit: ");
-            apu = int.Parse(Console.ReadLine());
-            tunnit = apu / 60 / 60;
-            minuutit = apu / 60 - tunnit * 60;
-            sekunnit = apu - minuutit * 60 - tunnit * 60;
+            sekunnit = int.Parse(Console.ReadLine());
+            tunnit = sekunnit / 60 / 60;
+            sekunnit = sekunnit % 3600;
+            minuutit = sekunnit / 60;
+            sekunnit = sekunnit % 60;
 
 
             Console.WriteLine("Antamasi aika voidaan ilmaista muodossa: " + tunnit + " tuntia " + minuutit + " minuuttia " + sekunnit + " sekuntia.");
@@ -265,7 +266,7 @@ namespace Hello
             int x = 1;
 
 
-            for (i = 0; x != 0; i++) 
+            for (i = 0; x != 0; i++)
             {
                 Console.WriteLine("Anna luku:");
                 x = int.Parse(Console.ReadLine());
@@ -282,9 +283,9 @@ namespace Hello
         static void Harjoitus10()
         {
 
-            int[] luvut = { 1,2,33,44,55,68,77,96,100 };
+            int[] luvut = { 1, 2, 33, 44, 55, 68, 77, 96, 100 };
             int i;
-            
+
             for (i = 0; i < luvut.Length; i++)
             {
                 if (IsOdd(i))
@@ -293,7 +294,7 @@ namespace Hello
                 }
             }
         }
-                
+
         static bool IsOdd(int value)
         {
             return value % 2 != 0;
@@ -362,36 +363,36 @@ namespace Hello
                 Console.Write("Anna luku:");
                 pisteet[i] = int.Parse(Console.ReadLine());
             }
-                        
+
             Array.Sort(pisteet); //sortataan luvut
             sum = pisteet.Sum(); //lasketaan pisteet yhteen
             sum = sum - pisteet[0] - pisteet[4]; //miinustetaan pisteistä suurin ja pienin pistemäärä
-                      
+
             Console.WriteLine("Kokonaispisteet ovat: " + sum);
-            
+
         }
 
         /* Harjoitus 14, ohjelma kysyy arvosanat ja näyttää montako kpl tuli mitäkin arvosanaa */
 
-     /*   static void Harjoitus14()
-        {
+        /*   static void Harjoitus14()
+           {
 
-            int[] arvosanat = new int[10];
-            List<Part> parts = new List<Part>();
+               int[] arvosanat = new int[10];
+               List<Part> parts = new List<Part>();
 
 
-            for (int i = 0; i < arvosanat.Length; i++)
-            {
-                Console.Write("Syötä arvosana 0-5:");
-                arvosanat[i] = int.Parse(Console.ReadLine());
-            }
+               for (int i = 0; i < arvosanat.Length; i++)
+               {
+                   Console.Write("Syötä arvosana 0-5:");
+                   arvosanat[i] = int.Parse(Console.ReadLine());
+               }
 
-            foreach (int luku in arvosanat)
-            {
-                if (luku == 0)
-                    
-            }
-        } */
+               foreach (int luku in arvosanat)
+               {
+                   if (luku == 0)
+
+               }
+           } */
 
         /* Harjoitus 15, ohjelma kysyy luvun ja tulostaa sen mukaan *-merkkejä */
 
@@ -405,7 +406,7 @@ namespace Hello
             for (rivinro = 0; rivinro < luku; rivinro++)
             {
 
-                for (sarakenro = 0; sarakenro < luku-rivinro-1; sarakenro++)
+                for (sarakenro = 0; sarakenro < luku - rivinro - 1; sarakenro++)
                 {
                     Console.Write(" ");
                 }
@@ -414,7 +415,7 @@ namespace Hello
                 {
 
                     Console.Write("*");
-                    
+
                 }
                 Console.WriteLine();
             }
@@ -446,7 +447,7 @@ namespace Hello
                     Console.WriteLine("Onnittelut! Arvasit oikein, luku oli " + luku);
 
             } while (arvaus != luku);
-            
+
         }
 
         /* Harjoitus 17, ohjelma kysyy kaksi eri lukujonoa ja tulostaa ne kolmanteen jonoon suuruusjärjestyksessä */
@@ -484,7 +485,7 @@ namespace Hello
                 luvut3[j] = luvut2[i];
                 j++;
             }
-                        
+
             Array.Sort(luvut3); //sortataan luvut
 
             Console.Write("Antamasi numerot suuruusjärjestyksessä: ");
@@ -505,19 +506,72 @@ namespace Hello
         static void Harjoitus18()
         {
             string mjono; // muistipaikka merkkijonolle, 100 merkkiä + NULL
-           
+
             Console.WriteLine("Anna merkkijono tarkistaaksesi onko se palindromi: ");
             mjono = Console.ReadLine();
 
             if (mjono.SequenceEqual(mjono.Reverse()))
-                { Console.WriteLine(mjono + " on palindromi.");
-                }
+            {
+                Console.WriteLine(mjono + " on palindromi.");
+            }
 
             else
-                { Console.WriteLine(mjono + " ei ole palindromi.");
-                }
+            {
+                Console.WriteLine(mjono + " ei ole palindromi.");
+            }
+        }
 
-           
-        }
-        }
+        /* Harjoitus 19, hirsipuupeli 
+
+        static void Harjoitus19()
+        {
+
+            string[] sana = new string[8];
+            string kissa;
+            char arvaus;
+            int elama = 5;
+
+            Console.WriteLine("Hirsipuupeli")
+
+            for (arvaus = g; i < luvut1.Length; i++)
+            {
+                Console.WriteLine("Anna luku jonoon 1:");
+                luvut1[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (i = 0; i < luvut2.Length; i++)
+            {
+                Console.WriteLine("Anna luku jonoon 2:");
+                luvut2[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (i = 0; i < luvut1.Length; i++)
+            {
+                luvut3[j] = luvut1[i];
+                j++;
+            }
+
+
+            for (i = 0; i < luvut2.Length; i++)
+            {
+                luvut3[j] = luvut2[i];
+                j++;
+            }
+
+            Array.Sort(luvut3); //sortataan luvut
+
+            Console.Write("Antamasi numerot suuruusjärjestyksessä: ");
+            for (i = 0; i < 10; i++)
+            {
+                if (i <= 8)
+                    //   cout << lottorivi[i] << endl;
+                    Console.Write(luvut3[i] + ", ");
+
+                else
+                    Console.Write(luvut3[i] + "\n\n");
+            }
+
+        } */
+
+    }
 }
