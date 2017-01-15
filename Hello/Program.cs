@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus5();
+            Harjoitus19();
         }
 
         static void ShowNames()
@@ -374,11 +374,11 @@ namespace Hello
 
         /* Harjoitus 14, ohjelma kysyy arvosanat ja näyttää montako kpl tuli mitäkin arvosanaa */
 
-        /*   static void Harjoitus14()
+     /*      static void Harjoitus14()
            {
 
                int[] arvosanat = new int[10];
-               List<Part> parts = new List<Part>();
+               char nolla = new char[10];
 
 
                for (int i = 0; i < arvosanat.Length; i++)
@@ -521,57 +521,55 @@ namespace Hello
             }
         }
 
-        /* Harjoitus 19, hirsipuupeli 
+        /* Harjoitus 19, hirsipuupeli */
 
         static void Harjoitus19()
         {
 
-            string[] sana = new string[8];
-            string kissa;
+            string sana = "kissa";
             char arvaus;
-            int elama = 5;
+            char[] apu = new char[5] {' ',' ',' ',' ',' '};
+            int i, elama = 5;
+            bool oikein = true;
 
-            Console.WriteLine("Hirsipuupeli")
 
-            for (arvaus = g; i < luvut1.Length; i++)
+
+            Console.WriteLine("Hirsipuupeli");
+
+            do
             {
-                Console.WriteLine("Anna luku jonoon 1:");
-                luvut1[i] = int.Parse(Console.ReadLine());
-            }
-
-            for (i = 0; i < luvut2.Length; i++)
-            {
-                Console.WriteLine("Anna luku jonoon 2:");
-                luvut2[i] = int.Parse(Console.ReadLine());
-            }
-
-            for (i = 0; i < luvut1.Length; i++)
-            {
-                luvut3[j] = luvut1[i];
-                j++;
-            }
+                if (apu.Equals(sana))
+                {
+                    break;
+                }
 
 
-            for (i = 0; i < luvut2.Length; i++)
-            {
-                luvut3[j] = luvut2[i];
-                j++;
-            }
+                Console.WriteLine("Yrityksiä jäljellä: " + elama);
+                Console.WriteLine("Arvaa kirjain: ");
+                arvaus = char.Parse(Console.ReadLine());
 
-            Array.Sort(luvut3); //sortataan luvut
-
-            Console.Write("Antamasi numerot suuruusjärjestyksessä: ");
-            for (i = 0; i < 10; i++)
-            {
-                if (i <= 8)
-                    //   cout << lottorivi[i] << endl;
-                    Console.Write(luvut3[i] + ", ");
-
+                if (sana.Contains(arvaus))
+                {
+                    for (i = 0; i < sana.Length; i++)
+                    {
+                        if (sana[i] == arvaus)
+                        { apu[i] = arvaus; }
+                    }
+                }
                 else
-                    Console.Write(luvut3[i] + "\n\n");
+                {
+                    elama--;
+                }
+            } while (elama > 0);
+
+            if (apu.Equals(sana))
+            {
+                Console.WriteLine("Voitit pelin, sana oli " + sana);
             }
 
-        } */
-
+            else
+                Console.WriteLine("Hävisit pelin, sana oli " + sana);
+                }
+                
     }
 }
