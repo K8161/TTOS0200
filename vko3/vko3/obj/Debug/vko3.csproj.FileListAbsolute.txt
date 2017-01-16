@@ -1,0 +1,6 @@
+D:\K8161\vko3\vko3\bin\Debug\vko3.exe.config
+D:\K8161\vko3\vko3\bin\Debug\vko3.exe
+D:\K8161\vko3\vko3\bin\Debug\vko3.pdb
+D:\K8161\vko3\vko3\obj\Debug\vko3.csprojResolveAssemblyReference.cache
+D:\K8161\vko3\vko3\obj\Debug\vko3.exe
+D:\K8161\vko3\vko3\obj\Debug\vko3.pdb
