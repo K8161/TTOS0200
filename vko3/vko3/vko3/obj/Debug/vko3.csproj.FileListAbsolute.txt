@@ -1,6 +1,0 @@
-H:\koulu\olio-ohjelmointi\vko3\vko3\bin\Debug\vko3.exe.config
-H:\koulu\olio-ohjelmointi\vko3\vko3\bin\Debug\vko3.exe
-H:\koulu\olio-ohjelmointi\vko3\vko3\bin\Debug\vko3.pdb
-H:\koulu\olio-ohjelmointi\vko3\vko3\obj\Debug\vko3.csprojResolveAssemblyReference.cache
-H:\koulu\olio-ohjelmointi\vko3\vko3\obj\Debug\vko3.exe
-H:\koulu\olio-ohjelmointi\vko3\vko3\obj\Debug\vko3.pdb
