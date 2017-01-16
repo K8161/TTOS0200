@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus19();
+            Harjoitus10();
         }
 
         static void ShowNames()
@@ -283,14 +283,14 @@ namespace Hello
         static void Harjoitus10()
         {
 
-            int[] luvut = { 1, 2, 33, 44, 55, 68, 77, 96, 100 };
+            int[] numbers = { 1, 2, 33, 44, 55, 68, 77, 96, 100 };
             int i;
 
-            for (i = 0; i < luvut.Length; i++)
+            for (i = 0; i < numbers.Length; i++)
             {
                 if (IsOdd(i))
                 {
-                    Console.WriteLine(luvut[i] + " HEP");
+                    Console.WriteLine(numbers[i] + " HEP");
                 }
             }
         }
