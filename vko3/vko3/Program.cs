@@ -16,7 +16,8 @@ namespace vko3
             //TestaaTV();
             //TestVehicle();
             //TestaaOpiskelija();
-            TestNations();
+            //TestNations();
+            TestaaOpiskelija2();
         }
 
         //Tehtävän1 Kiuas-luokan testaus
@@ -163,6 +164,66 @@ namespace vko3
                 // display car data
                 USA.PrintData();
                 Console.ReadLine();
+            }
+        }
+
+        static void TestaaOpiskelija2()
+        {
+            {
+                string[,] oppilaat = new string[5, 4];
+                List<Opiskelija> Opiskelijat = new List<Opiskelija>();
+                                
+                // Opiskelija1
+                oppilaat[0, 0] = "Pekka";
+                oppilaat[0, 1] = "Perälä";
+                oppilaat[0, 2] = "1.1.1986";
+                oppilaat[0, 3] = "1";
+                // Opiskelija2
+                oppilaat[1, 0] = "Mauri";
+                oppilaat[1, 1] = "Mäyrä";
+                oppilaat[1, 2] = "6.4.1997";
+                oppilaat[1, 3] = "4";
+                // Opiskelija3
+                oppilaat[2, 0] = "Kalle";
+                oppilaat[2, 1] = "Käyrä";
+                oppilaat[2, 2] = "17.12.1990";
+                oppilaat[2, 3] = "1";
+                // Opiskelija4
+                oppilaat[3, 0] = "Tiina";
+                oppilaat[3, 1] = "Turma";
+                oppilaat[3, 2] = "23.10.1993";
+                oppilaat[3, 3] = "2";
+                // Opiskelija5
+                oppilaat[4, 0] = "Antti";
+                oppilaat[4, 1] = "Alava";
+                oppilaat[4, 2] = "3.9.1995";
+                oppilaat[4, 3] = "4";
+
+                  for (int i = 0; i < oppilaat.GetLength(0); i++)
+                  {
+                      for (int j = 0; j < oppilaat.GetLength(1); j++)
+                      {
+                        string s = oppilaat[i, j];
+
+                        if (j == 0)
+                        { Console.WriteLine("Etunimi: " + s); }
+
+                        else if (j == 1)
+                        { Console.WriteLine("Sukunimi: " + s); }
+
+                        else if (j == 2)
+                        { Console.WriteLine("Syntymäaika: " + s); }
+
+                        else if (j == 3)
+                        { Console.WriteLine("Ryhmätunnus: " + s + "\n"); }
+
+                    }
+
+                  } 
+               /* foreach (string s in oppilaat)
+                {
+                    Console.WriteLine(s);
+                } */
             }
         }
     }
