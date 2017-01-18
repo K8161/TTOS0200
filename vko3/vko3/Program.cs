@@ -40,34 +40,34 @@ namespace vko3
 
         static void TestaaPesukone()
         {
-            //luodaan kiuas olio
+            //luodaan pesuokne olio
             Pesukone pesukone = new JAMK.IT.Pesukone();
-            //pistetään kiuas lämpenemään ja asetetaan lämpöä&kosteutta
+            //pesukone päälle, pesulämpötila ja pesuohjelma
             pesukone.OnkoPaalla = true;
             pesukone.Pesulampotila = 50;
             pesukone.Pesuohjelma = "kirjopyykki";
-            //näytetään
+            //näytetään tiedot
             Console.WriteLine("Pesukone on päällä {0}", pesukone.OnkoPaalla);
             Console.WriteLine("Pesukoneen pesulämpötila {0}", pesukone.Pesulampotila);
             Console.WriteLine("Pesukoneen pesuohjelma {0}", pesukone.Pesuohjelma);
-            //mitä tapahtuu jos kosteus yli rajojen
+            //nostetaan lämpötilaa
             pesukone.NostaLampotila();
             Console.WriteLine("Pesukoneen pesulampotila {0}", pesukone.Pesulampotila);
         }
 
         static void TestaaTV()
         {
-            //luodaan kiuas olio
+            //luodaan tv olio
             TV tv = new JAMK.IT.TV();
-            //pistetään kiuas lämpenemään ja asetetaan lämpöä&kosteutta
+            //pistetään tv päälle ja annetaan kanava & äänenvoimakkuus
             tv.OnkoPaalla = true;
             tv.Kanava = 3;
             tv.Äänenvoimakkuus = 25;
-            //näytetään
+            //näytetään tv:n tiedot
             Console.WriteLine("TV on päällä {0}", tv.OnkoPaalla);
             Console.WriteLine("TV:n kanava on {0}", tv.Kanava);
             Console.WriteLine("TV:n äänenvoimakkuus on {0}", tv.Äänenvoimakkuus);
-            //mitä tapahtuu jos kosteus yli rajojen
+            //mvaihdetaan kanavaa ja äänenvoimakkuutta
             tv.LisääÄäntä();
             tv.VaihdaKanavaYlös();
             Console.WriteLine("TV:n kanava on {0}", tv.Kanava);
@@ -86,10 +86,10 @@ namespace vko3
                 // display car data
                 Toyota.PrintData();
                 Console.ReadLine();
-                // accelerate, change car's speed value and color to black
+                // accelerate, change cars speed value and color to black
                 Toyota.Accelerate();
                 Toyota.Blacken();
-                // display car data again, notice changed speed value!
+                // display car data again
                 Toyota.PrintData();
                 Console.ReadLine();
             }
@@ -155,13 +155,13 @@ namespace vko3
         static void TestNations()
         {
             {
-                // create car for test purposes
+                // create nation for test purposes
                 Nation USA = new Nation();
                 USA.Name = "United States of America";
                 USA.Population = 324720797;
                 USA.GDP = 18.558;
                 USA.NuclearWeapons = 6970;
-                // display car data
+                // display data
                 USA.PrintData();
                 Console.ReadLine();
             }
@@ -169,10 +169,10 @@ namespace vko3
 
         static void TestaaOpiskelija2()
         {
-            {
+            {   //Kaksiulotteinen taulukko oppilaiden tietoja varten
                 string[,] oppilaat = new string[5, 4];
-                List<Opiskelija> Opiskelijat = new List<Opiskelija>();
-                                
+                
+                //Lisätään opiskelijat taulukkoon                
                 // Opiskelija1
                 oppilaat[0, 0] = "Pekka";
                 oppilaat[0, 1] = "Perälä";
@@ -199,6 +199,8 @@ namespace vko3
                 oppilaat[4, 2] = "3.9.1995";
                 oppilaat[4, 3] = "4";
 
+
+                  //tulostetaan tiedot kahden for loopin avulla
                   for (int i = 0; i < oppilaat.GetLength(0); i++)
                   {
                       for (int j = 0; j < oppilaat.GetLength(1); j++)
@@ -220,10 +222,6 @@ namespace vko3
                     }
 
                   } 
-               /* foreach (string s in oppilaat)
-                {
-                    Console.WriteLine(s);
-                } */
             }
         }
     }
