@@ -14,10 +14,10 @@ namespace vko3
             //TestaaKiuas();
             //TestaaPesukone();
             //TestaaTV();
-            //TestVehicle();
+            TestVehicle();
             //TestaaOpiskelija();
             //TestNations();
-            TestaaOpiskelija2();
+            //TestaaOpiskelija2();
         }
 
         //Tehtävän1 Kiuas-luokan testaus
@@ -78,20 +78,22 @@ namespace vko3
         {
             {
                 // create car for test purposes
-                Vehicle Toyota = new Vehicle();
-                Toyota.Name = "Toyota Corolla";
-                Toyota.Color = "White";
-                Toyota.Speed = 0;
-                Toyota.Tyres = 4;
+                Vehicle toyota = new Vehicle();
+                toyota.Name = "Toyota Corolla";
+                toyota.Color = "White";
+                toyota.Speed = 0;
+                toyota.Tyres = 4;
                 // display car data
-                Toyota.PrintData();
+                toyota.PrintData();
                 Console.ReadLine();
                 // accelerate, change cars speed value and color to black
-                Toyota.Accelerate();
-                Toyota.Blacken();
+                toyota.Accelerate();
+                toyota.Blacken();
                 // display car data again
-                Toyota.PrintData();
+                toyota.PrintData();
                 Console.ReadLine();
+
+                toyota.ToString();
             }
         }
 
@@ -99,7 +101,7 @@ namespace vko3
         {
             {
                 List<Opiskelija> Opiskelijat = new List<Opiskelija>();
-                
+
                 // Opiskelija1
                 Opiskelija Opiskelija1 = new Opiskelija();
                 Opiskelija1.Etunimi = "Pekka";
@@ -171,7 +173,7 @@ namespace vko3
         {
             {   //Kaksiulotteinen taulukko oppilaiden tietoja varten
                 string[,] oppilaat = new string[5, 4];
-                
+
                 //Lisätään opiskelijat taulukkoon                
                 // Opiskelija1
                 oppilaat[0, 0] = "Pekka";
@@ -200,11 +202,11 @@ namespace vko3
                 oppilaat[4, 3] = "4";
 
 
-                  //tulostetaan tiedot kahden for loopin avulla
-                  for (int i = 0; i < oppilaat.GetLength(0); i++)
-                  {
-                      for (int j = 0; j < oppilaat.GetLength(1); j++)
-                      {
+                //tulostetaan tiedot kahden for loopin avulla
+                for (int i = 0; i < oppilaat.GetLength(0); i++)
+                {
+                    for (int j = 0; j < oppilaat.GetLength(1); j++)
+                    {
                         string s = oppilaat[i, j];
 
                         if (j == 0)
@@ -221,7 +223,7 @@ namespace vko3
 
                     }
 
-                  } 
+                }
             }
         }
     }
