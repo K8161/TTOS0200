@@ -22,7 +22,7 @@ namespace vko3kerta2T4
             bike1.Color = "Red";
             bike1.GearWheels = false;
             bike1.GearName = " ";
-            Console.WriteLine(bike1.ToString());
+            Console.WriteLine("Bike info: \n{0}\n", bike1.ToString());
 
             // create second Bike object
             Bike bike2 = new Bike();
@@ -32,7 +32,7 @@ namespace vko3kerta2T4
             bike2.Color = "Black/Yellow";
             bike2.GearWheels = true;
             bike2.GearName = "Shimano";
-            Console.WriteLine(bike2.ToString());
+            Console.WriteLine("Bike info: \n{0}\n", bike2.ToString());
 
             // create first Boat object
             Boat boat1 = new Boat();
@@ -42,7 +42,7 @@ namespace vko3kerta2T4
             boat1.Color = "Ugly green";
             boat1.BoatType = "Rowboat";
             boat1.SeatCount = 3;
-            Console.WriteLine(boat1.ToString());
+            Console.WriteLine("Boat info: \n{0}\n ", boat1.ToString());
 
             // create second Boat object
             Boat boat2 = new Boat();
@@ -52,7 +52,7 @@ namespace vko3kerta2T4
             boat2.Color = "White";
             boat2.BoatType = "Catamaran";
             boat2.SeatCount = 8;
-            Console.WriteLine(boat2.ToString());
+            Console.WriteLine("Boat info: \n{0}\n", boat2.ToString());
 
 
             // do something methods (unused)
