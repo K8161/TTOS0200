@@ -10,32 +10,34 @@ namespace vko3kerta2T4
     {
 
         public string Name { get; set; }
-        public string Profession { get; set; }
-        public string Salary { get; set; }
+        public string Model { get; set; }
+        public int ModelYear { get; set; }
+        public string Color { get; set; }
 
         // default constructor
-        public Employee()
+        public Ride()
         {
         }
 
         // constructor takes person firstname and lastname as a parameter
-        public Employee(string fullName, string profession, string salary)
+        public Ride(string name, string model, int modelYear, string color)
         {
-            Name = fullName;
-            Profession = profession;
-            Salary = salary;
+            Name = name;
+            Model = model;
+            ModelYear = modelYear;
+            Color = color;
         }
 
-        // just one method what Person can do
-        public void EmployeeMethod()
+        // just testing methods
+        public void RideMethod()
         {
-            Console.WriteLine("This method belongs to Employee!");
+            Console.WriteLine("This method belongs to Ride!");
         }
 
         // return Person data as a one string, override Object class ToString()-method
         public override string ToString()
         {
-            return "Name: " + Name + " Profession: " + Profession + " Salary: " + Salary;
+            return "Name: " + Name + " Model: " + Model + " ModelYear: " + ModelYear + " Color: " + Color;
         }
     }
 }

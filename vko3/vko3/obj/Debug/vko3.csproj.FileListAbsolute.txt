@@ -10,3 +10,9 @@ D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3kerta1.exe
 D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3kerta1.pdb
 D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3kerta1.exe
 D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3kerta1.pdb
+H:\koulu\VisualRepos\vko3\vko3\bin\Debug\vko3kerta1.exe.config
+H:\koulu\VisualRepos\vko3\vko3\bin\Debug\vko3kerta1.exe
+H:\koulu\VisualRepos\vko3\vko3\bin\Debug\vko3kerta1.pdb
+H:\koulu\VisualRepos\vko3\vko3\obj\Debug\vko3.csprojResolveAssemblyReference.cache
+H:\koulu\VisualRepos\vko3\vko3\obj\Debug\vko3kerta1.exe
+H:\koulu\VisualRepos\vko3\vko3\obj\Debug\vko3kerta1.pdb

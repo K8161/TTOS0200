@@ -24,7 +24,7 @@ namespace vko3kerta2
             Bonus = bonus;
         }
 
-        // just one method what Teacher can do 
+        // just one method what Boss can do 
         public void BossMethod()
         {
             Console.WriteLine("This method belongs to Boss!");

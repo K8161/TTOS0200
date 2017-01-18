@@ -25,7 +25,7 @@ namespace vko3kerta2
             Salary = salary;
         }
 
-        // just one method what Person can do
+        // just one method what Employee can do
         public void EmployeeMethod()
         {
             Console.WriteLine("This method belongs to Employee!");

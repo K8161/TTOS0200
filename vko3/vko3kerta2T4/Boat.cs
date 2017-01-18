@@ -8,32 +8,32 @@ namespace vko3kerta2T4
 {
     class Boat : Ride
     {
-        public string Car { get; set; }
-        public int Bonus { get; set; }
+        public string BoatType { get; set; }
+        public int SeatCount { get; set; }
 
         // default constructor
-        public Boss()
+        public Boat()
         {
         }
 
         // parametric constuctor calls base class constructor with parameters
-        public Boss(string fullName, string profession, string salary, string car, int bonus)
-            : base(fullName, profession, salary)
+        public Boat(string name, string model, int modelyear, string color, string boattype, int seatcount)
+            : base(name, model, modelyear, color)
         {
-            Car = car;
-            Bonus = bonus;
+            BoatType = boattype;
+            SeatCount = seatcount;
         }
 
-        // just one method what Teacher can do 
-        public void BossMethod()
+        // just testing methods 
+        public void BoatMethod()
         {
-            Console.WriteLine("This method belongs to Boss!");
+            Console.WriteLine("This method belongs to Boat!");
         }
 
         // override base class ToString()-method
         public override string ToString()
         {
-            return base.ToString() + " Car: " + Car + " Bonus: " + Bonus;
+            return base.ToString() + " BoatType: " + BoatType + " SeatCount: " + SeatCount;
         }
     }
 }
