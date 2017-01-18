@@ -101,6 +101,11 @@ namespace vko3
         {
             {
                 List<Opiskelija> Opiskelijat = new List<Opiskelija>();
+
+                /* Opiskelija[] opiskelija = new Opiskelija []
+                 * opiskelija[1].Etunimi = "Jorma"
+                 * opiskelija[1].Sukunimi = "Jakkara"
+                 * jne */
                 
                 // Opiskelija1
                 Opiskelija Opiskelija1 = new Opiskelija();
