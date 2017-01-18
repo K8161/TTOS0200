@@ -9,6 +9,7 @@ namespace vko3kerta2
     class Amplifier
     {
         private int volume;
+        private bool isVolumeValid;
         private const int maxVol = 100;
         private const int minVol = 0;
         public int Volume
@@ -20,35 +21,47 @@ namespace vko3kerta2
 
                 if (volume < minVol)
                 {
+                    isVolumeValid = false;
                     volume = 0;
                 }
 
                 else if (volume > maxVol)
                 {
+                    isVolumeValid = false;
                     volume = 100;
                 }
 
                 else
                 {
+                    isVolumeValid = true;
                     volume = value;
                 }
             }
         }
 
+       
+        public bool IsVolumeValid
+        {
+            get { return isVolumeValid; }
+        }
+        public string VolumeMessage()
+        {
+            if (isVolumeValid)
+                return "Current volume " + Volume;
+            else
+                return "Volume only available from range 0-100";
+        }
+
         public override string ToString()
         {
-            if (Volume < minVol)
+            if (IsVolumeValid)
             {
-                return "Too low volume -Amplifier volume is set to minimum: " + Volume;
+                return VolumeMessage();
             }
-
-            else if (Volume > maxVol)
-            {
-                return "Too much volume -Amplifier volume is set to maximum: " + Volume;
-            }
-
             else
-            return "Amplifier volume is set to " + Volume;
+            {
+                return VolumeMessage();
+            }
         }
     }
 }

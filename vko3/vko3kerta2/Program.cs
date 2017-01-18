@@ -10,8 +10,8 @@ namespace vko3kerta2
     {
         static void Main(string[] args)
         {
-            UseElevator();
-            //UseAmplifier();
+            //UseElevator();
+            UseAmplifier();
         }
 
         static void UseElevator()
