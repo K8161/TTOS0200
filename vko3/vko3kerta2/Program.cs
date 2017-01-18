@@ -12,7 +12,7 @@ namespace vko3kerta2
         {
             //UseElevator();
             //UseAmplifier();
-            Staff();
+            //Staff();
         }
 
         static void UseElevator()
