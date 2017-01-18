@@ -22,7 +22,7 @@ namespace Hello
         {
             //SayHello();
             //ShowNames();
-            Harjoitus15();
+            Harjoitus10();
         }
 
         static void ShowNames()
@@ -374,34 +374,25 @@ namespace Hello
 
         /* Harjoitus 14, ohjelma kysyy arvosanat ja näyttää montako kpl tuli mitäkin arvosanaa */
 
-           static void Harjoitus14()
+     /*      static void Harjoitus14()
            {
 
                int[] arvosanat = new int[10];
-               int arvosana;
+               char nolla = new char[10];
 
 
-            while (true)
-            {
-                Console.Write("Anna arvosana > ");
-                arvosana = int.Parse(Console.ReadLine());
+               for (int i = 0; i < arvosanat.Length; i++)
+               {
+                   Console.Write("Syötä arvosana 0-5:");
+                   arvosanat[i] = int.Parse(Console.ReadLine());
+               }
 
-                if (arvosana < 0 || arvosana > 5) break;
+               foreach (int luku in arvosanat)
+               {
+                   if (luku == 0)
 
-                else { arvosanat[arvosana]++; }
-
-            }
-
-            Console.WriteLine("Arvosanajakauma:");
-
-            for (int i = 0; i < 6; i++)
-            {
-                Console.Write(i + ":");
-                for (int j = 0; j < arvosanat[i]; j++) Console.Write("*");
-                Console.WriteLine();
-            }
-            Console.Read();
-        }
+               }
+           } */
 
         /* Harjoitus 15, ohjelma kysyy luvun ja tulostaa sen mukaan *-merkkejä */
 
@@ -532,7 +523,7 @@ namespace Hello
 
         /* Harjoitus 19, hirsipuupeli */
 
-   /*     static void Harjoitus19()
+        static void Harjoitus19()
         {
 
             string sana = "kissa";
@@ -578,7 +569,7 @@ namespace Hello
 
             else
                 Console.WriteLine("Hävisit pelin, sana oli " + sana);
-                } */
+                }
                 
     }
 }

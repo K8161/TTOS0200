@@ -78,22 +78,20 @@ namespace vko3
         {
             {
                 // create car for test purposes
-                Vehicle toyota = new Vehicle();
-                toyota.Name = "Toyota Corolla";
-                toyota.Color = "White";
-                toyota.Speed = 0;
-                toyota.Tyres = 4;
+                Vehicle Toyota = new Vehicle();
+                Toyota.Name = "Toyota Corolla";
+                Toyota.Color = "White";
+                Toyota.Speed = 0;
+                Toyota.Tyres = 4;
                 // display car data
-                toyota.PrintData();
+                Toyota.PrintData();
                 Console.ReadLine();
                 // accelerate, change cars speed value and color to black
-                toyota.Accelerate();
-                toyota.Blacken();
+                Toyota.Accelerate();
+                Toyota.Blacken();
                 // display car data again
-                toyota.PrintData();
+                Toyota.PrintData();
                 Console.ReadLine();
-
-                toyota.ToString();
             }
         }
 
