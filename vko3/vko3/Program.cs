@@ -14,10 +14,10 @@ namespace vko3
             //TestaaKiuas();
             //TestaaPesukone();
             //TestaaTV();
-            //TestVehicle();
+            TestVehicle();
             //TestaaOpiskelija();
             //TestNations();
-            TestaaOpiskelija2();
+            //TestaaOpiskelija2();
         }
 
         //Tehtävän1 Kiuas-luokan testaus
@@ -93,7 +93,7 @@ namespace vko3
                 toyota.PrintData();
                 Console.ReadLine();
 
-                toyota.ToString();
+                Console.WriteLine(toyota.ToString());
             }
         }
 
