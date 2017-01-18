@@ -4,9 +4,9 @@ H:\koulu\olio-ohjelmointi\vko3\vko3\bin\Debug\vko3.pdb
 H:\koulu\olio-ohjelmointi\vko3\vko3\obj\Debug\vko3.csprojResolveAssemblyReference.cache
 H:\koulu\olio-ohjelmointi\vko3\vko3\obj\Debug\vko3.exe
 H:\koulu\olio-ohjelmointi\vko3\vko3\obj\Debug\vko3.pdb
-D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3.exe.config
-D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3.exe
-D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3.pdb
-D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3.exe
-D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3.pdb
 D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3.csprojResolveAssemblyReference.cache
+D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3kerta1.exe.config
+D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3kerta1.exe
+D:\K8161\TTOS0200\vko3\vko3\bin\Debug\vko3kerta1.pdb
+D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3kerta1.exe
+D:\K8161\TTOS0200\vko3\vko3\obj\Debug\vko3kerta1.pdb

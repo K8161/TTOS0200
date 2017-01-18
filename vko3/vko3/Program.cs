@@ -14,7 +14,7 @@ namespace vko3
             //TestaaKiuas();
             //TestaaPesukone();
             //TestaaTV();
-            TestVehicle();
+            //TestVehicle();
             //TestaaOpiskelija();
             //TestNations();
             //TestaaOpiskelija2();
