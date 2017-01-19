@@ -36,7 +36,7 @@ namespace vko3kerta2T5
 
                 else
                 {
-                    isVolumeValid = 3;
+                    isVolumeValid = 0;
                     volume = value;
                 }
             }
@@ -50,9 +50,11 @@ namespace vko3kerta2T5
         public string VolumeMessage()
         {
             if (isVolumeValid == 1)
-                return "Current volume " + Volume;
+                return "Minimum Volume is 0";
+            else if (isVolumeValid == 2)
+                return "Maximum Volume is 100";
             else
-                return "Volume only available from range 0-100";
+                return "Volume set to " + Volume;
         }
 
         public int Frequency
