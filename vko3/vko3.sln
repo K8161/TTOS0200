@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko3kerta2", "vko3kerta2\vk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko3kerta2T4", "vko3kerta2T4\vko3kerta2T4.csproj", "{7A9914B1-8B99-4A0F-8FEF-E859FBBF6509}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko3kerta2T5", "vko3kerta2T5\vko3kerta2T5.csproj", "{D859AB59-1C5F-4D7D-BDA3-2880FFE94BCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7A9914B1-8B99-4A0F-8FEF-E859FBBF6509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9914B1-8B99-4A0F-8FEF-E859FBBF6509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9914B1-8B99-4A0F-8FEF-E859FBBF6509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D859AB59-1C5F-4D7D-BDA3-2880FFE94BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D859AB59-1C5F-4D7D-BDA3-2880FFE94BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D859AB59-1C5F-4D7D-BDA3-2880FFE94BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D859AB59-1C5F-4D7D-BDA3-2880FFE94BCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
