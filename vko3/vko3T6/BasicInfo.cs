@@ -9,39 +9,27 @@ namespace vko3kerta2T6
         class BasicInfo
         {
 
-            public string Name { get; set; }
-            public string Model { get; set; }
-            public int ModelYear { get; set; }
-            public string Color { get; set; }
+            public string ProductName { get; set; }
+            public int ReleaseYear { get; set; }
+            public string Genre { get; set; }
 
             // default constructor
-            public Ride()
+            public BasicInfo()
             {
             }
 
             // constructor takes person firstname and lastname as a parameter
-            public Ride(string name, string model, int modelYear, string color)
+            public BasicInfo(string productName, int releaseYear, string genre)
             {
-                Name = name;
-                Model = model;
-                ModelYear = modelYear;
-                Color = color;
+                ProductName = productName;
+                ReleaseYear = releaseYear;
+                Genre = genre;
             }
 
-            // just testing methods
-            public void RideMethod()
-            {
-                Console.WriteLine("This method belongs to Ride!");
-            }
-
-            // return Person data as a one string, override Object class ToString()-method
+            // return BasicInfo as a one string, override Object class ToString()-method
             public override string ToString()
             {
-                return "Name: " + Name + " Model: " + Model + " ModelYear: " + ModelYear + " Color: " + Color;
+                return "Name: " + ProductName + " Year of release: " + ReleaseYear + " Genre: " + Genre;
             }
         }
     }
-    class BasicInfo
-    {
-    }
-}

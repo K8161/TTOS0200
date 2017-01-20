@@ -10,54 +10,36 @@ namespace vko3kerta2T6
     {
         static void Main(string[] args)
         {
-            TestRide();
+            Stuff();
         }
-        static void TestRide()
+        static void Stuff()
         {
-            // create first Bike object
-            Bike bike1 = new Bike();
-            bike1.Name = "Helkama";
-            bike1.Model = "Mummopyörä";
-            bike1.ModelYear = 1954;
-            bike1.Color = "Red";
-            bike1.GearWheels = false;
-            bike1.GearName = " ";
-            Console.WriteLine("Bike info: \n{0}\n", bike1.ToString());
+            // create Game object
+            Game game1 = new Game();
+            game1.ProductName = "Medieval II: Total War";
+            game1.ReleaseYear = 2006;
+            game1.Genre = "Real-time tactics, Turn-based strategy";
+            game1.Developer = "Creative Assembly";
+            game1.Platform = "Windows, OS X, Linux";
+            Console.WriteLine("Game info: \n{0}\n", game1.ToString());
 
-            // create second Bike object
-            Bike bike2 = new Bike();
-            bike2.Name = "Cube Attain";
-            bike2.Model = "Road";
-            bike2.ModelYear = 2016;
-            bike2.Color = "Black/Yellow";
-            bike2.GearWheels = true;
-            bike2.GearName = "Shimano";
-            Console.WriteLine("Bike info: \n{0}\n", bike2.ToString());
+            // create Book object
+            Book book1 = new Book();
+            book1.ProductName = "The Complete Fiction of H.P. Lovecraft";
+            book1.ReleaseYear = 2014;
+            book1.Genre = "Horror";
+            book1.Author = "H. P. Lovecraft";
+            Console.WriteLine("Book info: \n{0}\n", book1.ToString());
 
-            // create first Boat object
-            Boat boat1 = new Boat();
-            boat1.Name = "Jolla";
-            boat1.Model = "Unknown";
-            boat1.ModelYear = 1976;
-            boat1.Color = "Ugly green";
-            boat1.BoatType = "Rowboat";
-            boat1.SeatCount = 3;
-            Console.WriteLine("Boat info: \n{0}\n ", boat1.ToString());
-
-            // create second Boat object
-            Boat boat2 = new Boat();
-            boat2.Name = "MermaidHunter";
-            boat2.Model = "Lagoon 42";
-            boat2.ModelYear = 2016;
-            boat2.Color = "White";
-            boat2.BoatType = "Catamaran";
-            boat2.SeatCount = 8;
-            Console.WriteLine("Boat info: \n{0}\n", boat2.ToString());
+            // create Magazine object
+            Magazine magazine1 = new Magazine();
+            magazine1.ProductName = "Aku Ankka";
+            magazine1.ReleaseYear = 2001;
+            magazine1.Genre = "Comic";
+            magazine1.Issue = 36;
+            Console.WriteLine("Magazine info: \n{0}\n ", magazine1.ToString());
 
 
-            // do something methods (unused)
-            //ride.RideMethod(); // This method belongs to Ride!
-            //bike1.BikeMethod(); // This method belongs to Bike! (derived class can use it!)
         }
     }
 }
