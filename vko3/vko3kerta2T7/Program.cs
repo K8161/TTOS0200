@@ -16,29 +16,29 @@ namespace vko3kerta2T7
         {
             // create Guitar object
             Guitar guitar1 = new Guitar();
-            guitar1.ProductName = "Medieval II: Total War";
-            guitar1.ReleaseYear = 2006;
-            guitar1.Genre = "Real-time tactics, Turn-based strategy";
-            guitar1.Developer = "Creative Assembly";
-            guitar1.Platform = "Windows, OS X, Linux";
-            Console.WriteLine("Game info: \n{0}\n", guitar1.ToString());
+            guitar1.Manufacturer = "ESP-LTD";
+            guitar1.Model = "EC-1000";
+            guitar1.ModelYear = 2016;
+            guitar1.Pickups = "EMG 81/60";
+            guitar1.Frets = "24 XJ";
+            Console.WriteLine("Guitar info: \n{0}\n", guitar1.ToString());
 
             // create Guitar object
             Guitar guitar2 = new Guitar();
-            guitar2.ProductName = "Medieval II: Total War";
-            guitar2.ReleaseYear = 2006;
-            guitar2.Genre = "Real-time tactics, Turn-based strategy";
-            guitar2.Developer = "Creative Assembly";
-            guitar2.Platform = "Windows, OS X, Linux";
-            Console.WriteLine("Game info: \n{0}\n", guitar1.ToString());
+            guitar2.Manufacturer = "Jackson";
+            guitar2.Model = "JS-32";
+            guitar2.ModelYear = 2006;
+            guitar2.Pickups = "Jackson humbuckers";
+            guitar2.Frets = "22";
+            Console.WriteLine("Guitar info: \n{0}\n", guitar2.ToString());
 
             // create Synthetisator object
             Synthetisator synth1 = new Synthetisator();
-            synth1.ProductName = "The Complete Fiction of H.P. Lovecraft";
-            synth1.ReleaseYear = 2014;
-            synth1.Genre = "Horror";
-            synth1.Author = "H. P. Lovecraft";
-            Console.WriteLine("Book info: \n{0}\n", book1.ToString());
+            synth1.Manufacturer = "Roland";
+            synth1.Model = "Juno-Di";
+            synth1.ModelYear = 2008;
+            synth1.Keys = 61;
+            Console.WriteLine("Synthetisator info: \n{0}\n", synth1.ToString());
 
         }
     }
