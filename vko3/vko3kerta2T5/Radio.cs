@@ -8,6 +8,7 @@ namespace vko3kerta2T5
 {
     class Radio
     {
+        public bool IsOn { get; set; }
         private int volume;
         private float frequency;
         private int isVolumeValid;
@@ -32,7 +33,7 @@ namespace vko3kerta2T5
                 else if (volume > maxVol)
                 {
                     isVolumeValid = 2;
-                    volume = 100;
+                    volume = 9;
                 }
 
                 else
