@@ -13,12 +13,12 @@ namespace vko3kerta2T5
             UseRadio();
         }
 
-        static void UseAmplifier()
+        static void UseRadio()
         {
             //creating amplifier object
-            Amplifier amplifier = new Amplifier();
+            Radio radio = new Radio();
             //volume is set to 20 by default
-            amplifier.Volume = 20;
+            radio.Volume = 5;
 
 
             for (int i = 0; i < 5; i++)
@@ -26,9 +26,11 @@ namespace vko3kerta2T5
 
 
                 //show Volume and ask how much Volume is wanted
-                Console.WriteLine(amplifier.ToString());
+                Console.WriteLine(radio.ToString());
                 Console.WriteLine("How much volume is wanted? ");
-                amplifier.Volume = Convert.ToInt32(Console.ReadLine());
+                radio.Volume = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Which frequency is wanted? ");
+                radio.Frequency = Convert.ToInt32(Console.ReadLine());
             }
         }
     }
