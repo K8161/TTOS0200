@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{815CE451-67EA-4F54-AA1B-27D1EB989656}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vko4", "vko4", "{60C45C70-6B16-4A69-9C06-DAE950729401}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko4T1", "vko4T1\vko4T1.csproj", "{9D0329CA-5385-45B9-AD00-565AA06606D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{815CE451-67EA-4F54-AA1B-27D1EB989656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{815CE451-67EA-4F54-AA1B-27D1EB989656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{815CE451-67EA-4F54-AA1B-27D1EB989656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0329CA-5385-45B9-AD00-565AA06606D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0329CA-5385-45B9-AD00-565AA06606D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0329CA-5385-45B9-AD00-565AA06606D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0329CA-5385-45B9-AD00-565AA06606D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D0329CA-5385-45B9-AD00-565AA06606D9} = {60C45C70-6B16-4A69-9C06-DAE950729401}
 	EndGlobalSection
 EndGlobal
