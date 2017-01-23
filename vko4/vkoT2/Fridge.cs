@@ -8,30 +8,28 @@ namespace vkoT2
 {
     class Fridge
     {
-        public string VehicleType { get; set; }
-        public string Name { get; set; }
+        public string Manufacturer { get; set; }
         public string Model { get; set; }
-        public int Year { get; set; }
-        private const int maxTyreCount = 4;
-        private int TyreCount = 0;
-        public List<Tyre> Tyres { get; }
+        private const int maxProductAmount = 12;
+        private int productAmount = 0;
+        public List<Consumable> Consumables { get; }
 
-        public Vehicle()
+        public Fridge()
         {
-            Tyres = new List<Tyre>();
+            Consumables = new List<Consumable>();
         }
 
-        public void AddTyre(Tyre tyre)
+        public void AddConsumable(Consumable consumable)
         {
-            if (TyreCount < maxTyreCount)
+            if (productAmount < maxProductAmount)
             {
-                Tyres.Add(tyre);
-                TyreCount++;
-                Console.WriteLine("Tyre {0} added to vehicle {1}", tyre.Model, Name);
+                Consumables.Add(consumable);
+                productAmount++;
+                Console.WriteLine("{0} {1} {2} added to fridge.", consumable.ProductType, consumable.Name, consumable.Size);
             }
             else
             {
-                Console.WriteLine("No room for new tyres.");
+                Console.WriteLine("Fridge is full!");
             }
         }
 
