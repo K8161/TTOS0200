@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vko4T1
+namespace vkoT2
 {
     class Program
     {
@@ -33,12 +33,12 @@ namespace vko4T1
             vehicle1.Model = "911";
             vehicle1.Year = 1989;
 
-      /*      List<Tyre> Porsche = new List<Tyre>();
-            // use polymorphis to store objects
-            Porsche.Add(tyre1);
-            Porsche.Add(tyre1);
-            Porsche.Add(tyre1);
-            Porsche.Add(tyre1); */
+            /*      List<Tyre> Porsche = new List<Tyre>();
+                  // use polymorphis to store objects
+                  Porsche.Add(tyre1);
+                  Porsche.Add(tyre1);
+                  Porsche.Add(tyre1);
+                  Porsche.Add(tyre1); */
 
             vehicle1.AddTyre(tyre1);
             vehicle1.AddTyre(tyre1);
