@@ -14,37 +14,36 @@ namespace vkoT2
         }
         static void Teht1()
         {
-            //create Tyre object
-            Tyre tyre1 = new Tyre();
-            tyre1.Name = "Nokia";
-            tyre1.Model = "Hakkapeliitta";
-            tyre1.TyreSize = "205R16";
+            //create Fridge object
+            Fridge fridge1 = new Fridge();
+            fridge1.Manufacturer = "Siemens";
+            fridge1.Model = "SN2000ZNS";
 
-            //create other Tyre object
-            Tyre tyre2 = new Tyre();
-            tyre2.Name = "MIC";
-            tyre2.Model = "Pilot";
-            tyre2.TyreSize = "160R17";
+            //create beer object
+            Consumable beer = new Consumable();
+            beer.ProductType = "Beer";
+            beer.Name = "Olvi III";
+            beer.Size = "0,33l";
 
-            //create car object
-            Vehicle vehicle1 = new Vehicle();
-            vehicle1.VehicleType = "Car";
-            vehicle1.Name = "Porsche";
-            vehicle1.Model = "911";
-            vehicle1.Year = 1989;
+            //create sausage object
+            Consumable sausage = new Consumable();
+            sausage.ProductType = "Sausage";
+            sausage.Name = "Wilhelm";
+            sausage.Size = "400g";
 
-            /*      List<Tyre> Porsche = new List<Tyre>();
-                  // use polymorphis to store objects
-                  Porsche.Add(tyre1);
-                  Porsche.Add(tyre1);
-                  Porsche.Add(tyre1);
-                  Porsche.Add(tyre1); */
+            //adding products to fridge
+            fridge1.AddConsumable(beer);
+            fridge1.AddConsumable(beer);
+            fridge1.AddConsumable(sausage);
+            fridge1.AddConsumable(sausage);
+            Console.WriteLine(fridge1.ToString());
 
-            vehicle1.AddTyre(tyre1);
-            vehicle1.AddTyre(tyre1);
-            vehicle1.AddTyre(tyre1);
-            vehicle1.AddTyre(tyre1);
-            Console.WriteLine(vehicle1.ToString());
+            //removing products from fridge
+            fridge1.RemoveConsumable(beer);
+            fridge1.RemoveConsumable(beer);
+            fridge1.RemoveConsumable(sausage);
+            fridge1.RemoveConsumable(sausage);
+            Console.WriteLine(fridge1.ToString());
         }
     }
 }
