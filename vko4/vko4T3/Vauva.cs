@@ -8,11 +8,27 @@ namespace vko4T3
 {
     class Vauva : Ihminen
     {
-        public string Vaippa;
+        public string Vaippa { get; set; }
+
+        public Vauva()
+        {
+        }
+
+        public Vauva(string nimi, int paino, int pituus, string vaippa) 
+            : base(nimi, paino, pituus)
+        {
+            vaippa = Vaippa;
+        }
+
 
         public override void Liiku()
         {
             Console.WriteLine("Konttaa");
+        }
+
+        public override string ToString()
+        {
+            return "Nimi: " + Nimi + " Pituus: " + Pituus + "cm Paino " + Paino + "kg Vaippa " + Vaippa + " Ikä " + Ika;
         }
     }
 }

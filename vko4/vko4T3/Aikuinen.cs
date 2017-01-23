@@ -8,11 +8,27 @@ namespace vko4T3
 {
     class Aikuinen : Ihminen
     {
-        public string Auto;
+        public string Auto { get; set; }
+
+        public Aikuinen()
+        {
+        }
+
+        public Aikuinen(string nimi, int paino, int pituus, string auto) 
+            : base(nimi, paino, pituus)
+        {
+            auto = Auto;
+        }
+
 
         public override void Liiku()
         {
             Console.WriteLine("Kävelee");
+        }
+
+        public override string ToString()
+        {
+            return "Nimi: " + Nimi + " Pituus: " + Pituus + "cm Paino " + Paino + "kg Auto " + Auto;
         }
     }
 }

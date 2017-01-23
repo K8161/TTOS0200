@@ -14,11 +14,6 @@ namespace vko4T3
         {
         }
 
-        public DrawingObject(string name)
-        {
-            Name = name;
-        }
-
 
         public abstract void Liiku();
     }
