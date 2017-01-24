@@ -23,13 +23,13 @@ namespace vkoT2
         //method to add products to fridge
         public void AddConsumable(Consumable consumable)
         {
-            if (productAmount < maxProductAmount)
+            if (productAmount <= maxProductAmount)
             {
                 Consumables.Add(consumable);
                 productAmount++;
                 Console.WriteLine("{0} {1} {2} added to fridge.", consumable.ProductType, consumable.Name, consumable.Size);
             }
-            else
+            else if (productAmount >= maxProductAmount)
             {
                 Console.WriteLine("Fridge is full!");
             }
@@ -38,13 +38,13 @@ namespace vkoT2
         //method to remove products from fridge
         public void RemoveConsumable(Consumable consumable)
         {
-            if (productAmount > minProductAmount)
+            if (productAmount >= minProductAmount)
             {
                 Consumables.Remove(consumable);
                 productAmount--;
                 Console.WriteLine("{0} {1} {2} consumed.", consumable.ProductType, consumable.Name, consumable.Size);
             }
-            else
+            else if (productAmount <= minProductAmount)
             {
                 Console.WriteLine("Fridge is empty!");
             }
