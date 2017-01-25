@@ -37,52 +37,55 @@ namespace vko4kerta2T3
             }
         }
 
+
         public override void ShowCard()
         {
             Console.WriteLine(Number + " of " + Suit);
         }
+    }
 
-        //Diamonds class
-        class Diamonds : Card
+    //Diamonds class
+    class Diamonds : Card
+    {
+        public override string Suit
         {
-            public override string Suit
+            get
             {
-                get
-                {
-                    return "Hearts";
-                }
-
-                set
-                {
-                    Suit = value;
-                }
+                return "Hearts";
             }
 
-            public override void ShowCard()
+            set
             {
-                Console.WriteLine(Number + " of " + Suit);
+                Suit = value;
+            }
+        }
+
+        public override void ShowCard()
+        {
+            Console.WriteLine(Number + " of " + Suit);
+        }
+    }
+    //Clubs class
+    class Clubs : Card
+    {
+        public override string Suit
+        {
+            get
+            {
+                return "Hearts";
             }
 
-            //Clubs class
-            class Clubs : Card
+            set
             {
-                public override string Suit
-                {
-                    get
-                    {
-                        return "Hearts";
-                    }
+                Suit = value;
+            }
+        }
 
-                    set
-                    {
-                        Suit = value;
-                    }
-                }
-
-                public override void ShowCard()
-                {
-                    Console.WriteLine(Number + " of " + Suit);
-                }
+        public override void ShowCard()
+        {
+            Console.WriteLine(Number + " of " + Suit);
+        }
+    }
 
                 //Spades class
                 class Spades : Card
@@ -105,9 +108,4 @@ namespace vko4kerta2T3
                         Console.WriteLine(Number + " of " + Suit);
                     }
                 }
-            }
-        }
-    }
-}
-                
-            
+            }   
