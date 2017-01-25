@@ -12,9 +12,20 @@ namespace vko4kerta2T2
         public string AlbumName { get; set; }
         public List<Song> Songs { get; }
 
+        public override string ToString()
+        {
+            return Artist + ": " + AlbumName;
+        }
+
         public CD()
         {
             Songs = new List<Song>();
+        }
+
+        public void AddSong(Song song)
+        {
+                Songs.Add(song);
+            
         }
     }
 }

@@ -9,6 +9,11 @@ namespace vko4kerta2T2
     class Song
     {
         public string SongName { get; set; }
-        public float SongLength { get; set; }
+        public string SongLength { get; set; }
+
+        public override string ToString()
+        {
+            return " - " + SongName + "  " + SongLength;
+        }
     }
 }
