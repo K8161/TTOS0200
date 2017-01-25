@@ -16,6 +16,7 @@ namespace vko4T3
 
 
         public abstract void Liiku();
+
     }
 }
 

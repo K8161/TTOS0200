@@ -28,10 +28,10 @@ namespace vko4T3
             vauva1.Vaippa = "Pampers";
 
             Ihminen ihminen1 = new Ihminen();
-            ihminen1.Nimi = "Teppo";
-            ihminen1.Pituus = 185;
-            ihminen1.Paino = 86;
-            ihminen1.Ika = 34;
+            ihminen1.Nimi = "Taukki";
+            ihminen1.Pituus = 165;
+            ihminen1.Paino = 112;
+            ihminen1.Ika = 42;
 
 
 
@@ -43,12 +43,24 @@ namespace vko4T3
             nisakkaat.Add(vauva1);
 
 
-            Console.WriteLine("Loop through all drawing objects in a list:");
+            Console.WriteLine("Show collection of mammals:");
                    foreach (Nisakas nisakas in nisakkaat)
                    {
                 Console.WriteLine(nisakas.ToString());
                 nisakas.Liiku();
-                   } 
+                   }
+
+            aikuinen1.Kasva();
+            vauva1.Kasva();
+            ihminen1.Kasva();
+
+            Console.WriteLine("Same collection after one year:");
+            foreach (Nisakas nisakas in nisakkaat)
+            {
+                Console.WriteLine(nisakas.ToString());
+                nisakas.Liiku();
+            }
+
         }
     }
 }

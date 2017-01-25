@@ -28,7 +28,7 @@ namespace vko4T3
 
         public override string ToString()
         {
-            return "Nimi: " + Nimi + " Pituus: " + Pituus + "cm Paino " + Paino + "kg Vaippa " + Vaippa + " Ikä " + Ika;
+            return base.ToString() + " Vaippa: " + Vaippa;
         }
     }
 }
