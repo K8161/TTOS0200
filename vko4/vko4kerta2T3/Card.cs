@@ -8,7 +8,7 @@ namespace vko4kerta2T3
 {
     abstract class Card
     {
-        public int Number { get; set; }
+        public virtual int Number { get; set; }
         public virtual string Suit { get; set; }
 
         public Card()
@@ -19,12 +19,12 @@ namespace vko4kerta2T3
             Number = number;
         }
 
-        public abstract void ShowCard();
+        public  abstract void ShowCard();
     }
     //Hearts class
     class Hearts : Card
     {
-        public override string Suit
+         public override string Suit
         {
             get
             {
@@ -51,7 +51,7 @@ namespace vko4kerta2T3
         {
             get
             {
-                return "Hearts";
+                return "Diamonds";
             }
 
             set
@@ -72,7 +72,7 @@ namespace vko4kerta2T3
         {
             get
             {
-                return "Hearts";
+                return "Clubs";
             }
 
             set
@@ -94,7 +94,7 @@ namespace vko4kerta2T3
                     {
                         get
                         {
-                            return "Hearts";
+                            return "Spades";
                         }
 
                         set
