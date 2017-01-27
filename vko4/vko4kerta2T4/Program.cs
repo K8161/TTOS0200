@@ -10,6 +10,17 @@ namespace vko4kerta2T4
     {
         static void Main(string[] args)
         {
+            TestJoukkue();
+        }
+
+        static void TestJoukkue()
+        {
+            //create Fridge object
+            Team jyp = new Team();
+            jyp.TeamName = "JYP";
+            jyp.HomeCity = "Jyväskylä";
+
+            jyp.AddPlayer();
         }
     }
 }
