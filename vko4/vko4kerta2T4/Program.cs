@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,19 @@ namespace vko4kerta2T4
 
         static void TestJoukkue()
         {
-            //create Fridge object
+            //create team object
             Team jyp = new Team();
             jyp.TeamName = "JYP";
             jyp.HomeCity = "Jyväskylä";
 
-            jyp.AddPlayer();
+            Console.WriteLine(jyp.ToString());
+
+            jyp.ToString();
+
+            jyp.SaveTeam();
+
+            string text = File.ReadAllText("Players.txt");
+            Console.WriteLine(text);
         }
     }
 }
