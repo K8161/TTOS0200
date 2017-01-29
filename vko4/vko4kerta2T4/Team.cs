@@ -30,7 +30,7 @@ namespace vko4kerta2T4
 
             Player player;
 
-
+            //using stream reader to read data from file
             using (StreamReader fr = new StreamReader("Players.txt"))
             {
 
@@ -39,7 +39,7 @@ namespace vko4kerta2T4
                     player = new Player();
                     words = line.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries);
 
-                    player.PlayerNumber = int.Parse(words[0]);
+                    player.PlayerNumber = words[0];
                     player.LastName = words[1];
                     player.FirstName = words[2];
                     player.TimeOfBirth = words[3];
@@ -67,7 +67,7 @@ namespace vko4kerta2T4
         public void SaveTeam()
         {
             string s = "Team: " + TeamName + " Origin: " + HomeCity + "\nPlayers: ";
-            using (StreamWriter fs = new StreamWriter("joukkue.txt"))
+            using (StreamWriter fs = new StreamWriter("TeamInfo.txt"))
             {
                 foreach (Player player in Players)
                 {

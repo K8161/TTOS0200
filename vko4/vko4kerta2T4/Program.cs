@@ -21,12 +21,13 @@ namespace vko4kerta2T4
             jyp.TeamName = "JYP";
             jyp.HomeCity = "Jyväskylä";
 
-            Console.WriteLine(jyp.ToString());
-
+            //print team data with players
             jyp.ToString();
 
+            //save team data
             jyp.SaveTeam();
 
+            //just testing reading directly from file
             string text = File.ReadAllText("Players.txt");
             Console.WriteLine(text);
         }

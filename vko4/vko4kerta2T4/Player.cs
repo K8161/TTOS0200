@@ -11,7 +11,7 @@ namespace vko4kerta2T4
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string TimeOfBirth { get; set; }
-        public int PlayerNumber { get; set; }
+        public string PlayerNumber { get; set; }
 
         public override string ToString()
         {
