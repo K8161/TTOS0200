@@ -37,9 +37,9 @@ namespace JAMK.IT.vko5Kerta1T2
                 }
 
                 // and printing
-                foreach (var pair in nameCount)
+                foreach (var sameName in nameCount)
                 {
-                    Console.WriteLine("{0} found: {1} times", pair.Key, pair.Value);
+                    Console.WriteLine("{0} found: {1} times", sameName.Key, sameName.Value);
                 }
             }
             catch (FileNotFoundException)
