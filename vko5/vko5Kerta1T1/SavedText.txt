@@ -1,0 +1,3 @@
+mummeli
+koira
+exit
