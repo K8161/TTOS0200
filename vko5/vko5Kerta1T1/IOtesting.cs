@@ -18,13 +18,13 @@ namespace JAMK.IT.vko5Kerta1T1
             try
             {
                 Console.WriteLine("Welcome to textsaver Pro 2000!");
-                outputFile = new System.IO.StreamWriter(@"SavedText.txt");
+                outputFile = new System.IO.StreamWriter(@"..\..\SavedText.txt");
                 do
                 {
                     Console.WriteLine("Give text to save: ");
                     Text = Console.ReadLine();
                     outputFile.WriteLine(Text);
-                } while (Text != "exit");
+                } while (Text != String.Empty);
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace JAMK.IT.vko5Kerta1T1
             // @"D:\K8161\TTOS0200\vko5\vko5Kerta1T1\SavedText.txt"
             try
             {
-            string text = System.IO.File.ReadAllText(@"SavedText.txt");
+            string text = System.IO.File.ReadAllText(@"..\..\SavedText.txt");
         System.Console.WriteLine("Your nonsense printed:\n" + text);
         } catch (FileNotFoundException)
         {

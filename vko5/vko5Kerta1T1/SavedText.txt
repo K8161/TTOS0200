@@ -1,3 +1,4 @@
-mummeli
 koira
-exit
+kissa
+rotta
+
