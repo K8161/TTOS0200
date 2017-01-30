@@ -9,13 +9,10 @@ namespace vko4kerta2T4
 {
     class Team
     {
-       // List<Player> players;
-
         public string TeamName { get; set; }
         public string HomeCity { get; set; }
 
         public List<Player> Players { get; set; }
-
 
         public Team()
         {
@@ -33,7 +30,6 @@ namespace vko4kerta2T4
             //using stream reader to read data from file
             using (StreamReader fr = new StreamReader("Players.txt"))
             {
-
                 while ((line = fr.ReadLine()) != null)
                 {
                     player = new Player();
