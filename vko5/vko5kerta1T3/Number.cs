@@ -76,7 +76,7 @@ namespace vko5kerta1T3
             try
             {
                 string text = System.IO.File.ReadAllText(@"..\..\Doubles.txt");
-                System.Console.WriteLine("Integers:\n" + text);
+                System.Console.WriteLine("Doubles:\n" + text);
             }
             catch (FileNotFoundException)
             {
