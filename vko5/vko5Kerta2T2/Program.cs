@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vko5Kerta2T2
+namespace JAMK.IT.vko5Kerta2T2
 {
     class Program
     {
@@ -27,14 +27,14 @@ namespace vko5Kerta2T2
 
             Product chicken = new Product();
             chicken.Name = "Fried chicken";
-            beer.Price = 4.99;
+            chicken.Price = 4.99;
 
             products.Add(beer);
             products.Add(vodka);
             products.Add(chicken);
 
             foreach (Product product in products)
-            { Console.WriteLine(products.ToString()); }
+            { Console.WriteLine(product.ToString()); }
         }
     }
 }

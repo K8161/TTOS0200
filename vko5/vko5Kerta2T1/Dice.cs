@@ -22,6 +22,7 @@ namespace vko5Kerta2T1
         public void ThrowDice()
         {
             DiceValue = rnd.Next(minDiceValue, maxDiceValue);
+            Console.WriteLine(DiceValue);
           //  Dice dice = new Dice ();
             diceThrows.Add(new Dice());
         }

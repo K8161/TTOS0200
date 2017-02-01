@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vko5Kerta2T2
+namespace JAMK.IT.vko5Kerta2T2
 {
     class Product
     {
@@ -14,7 +14,7 @@ namespace vko5Kerta2T2
         // override base class ToString()-method
         public override string ToString()
         {
-            return "- product : " + Name + " " + Price + " e";
+            return "Product : " + Name + " " + Price + " e";
         }
     }
 }
