@@ -22,7 +22,7 @@ namespace vko5Kerta2T3
         public void AddFish(Fish fish)
         {
                 Fishes.Add(fish);
-                Console.WriteLine("{0} caught {1}!.", Name, fish.Specie);
+                Console.WriteLine("{0} caught {1}!", Name, fish.Specie);
 
         }
 
