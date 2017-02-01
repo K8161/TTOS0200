@@ -20,7 +20,7 @@ namespace JAMK.IT.vko5Kerta1T2
                      }
                      Console.WriteLine("Found " + lines.Length + " lines."); */
 
-                var nameCount = new Dictionary<string, int>();
+                var nameCount = new SortedDictionary<string, int>();
 
                 String[] lines = File.ReadAllLines(@"..\..\test.txt");
                 Console.WriteLine("Found " + lines.Length + " lines.");

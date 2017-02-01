@@ -12,7 +12,6 @@ namespace vko5kerta1T3
         public string NumberValue { get; set; }
 
         int IntNumber;
-        double DoubleNumber;
 
         public void SaveNumbers()
         {
@@ -26,20 +25,19 @@ namespace vko5kerta1T3
                 outputFileDoubles = new System.IO.StreamWriter(@"..\..\Doubles.txt");
                 do
                 {
-                    Console.WriteLine("Give text to save: ");
+                    Console.WriteLine("Give numbers to save: ");
                     NumberValue = Console.ReadLine();
-                    if (int.TryParse(NumberValue, out IntNumber))
+                    int.TryParse(NumberValue, out IntNumber);
+                    if (IntNumber == 0)
                     {
-                        outputFileInts.WriteLine(IntNumber);
-                    }
-
-                    else if (double.TryParse(NumberValue, out DoubleNumber))
-                    {
-                        outputFileInts.WriteLine(DoubleNumber);
+                        outputFileDoubles.WriteLine(NumberValue);
                     }
 
                     else
-                    { break; }
+                    {
+                        outputFileInts.WriteLine(NumberValue);
+                    }
+
                 } while (NumberValue != String.Empty);
             }
             catch (Exception ex)
