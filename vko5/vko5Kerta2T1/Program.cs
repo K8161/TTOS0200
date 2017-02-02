@@ -14,21 +14,37 @@ namespace vko5Kerta2T1
         }
         static void DiceTesting()
         {
-            string input;
-            int amountOfThrows;
             Dice monopolDice = new Dice();
 
-            Console.WriteLine("Let's throw dice! How many throws you want? ");
-            input = Console.ReadLine();
-            int.TryParse(input, out amountOfThrows);
+            try
+            {
+                monopolDice.AskUser();
+           }
+           catch (Exception ex)
+           {
 
-            do
+               Console.WriteLine(ex.Message);
+            }
+
+            try
             {
                 monopolDice.ThrowDice();
-                amountOfThrows--;
-            } while (amountOfThrows > 0);
+            }
+            catch (Exception ex)
+            {
 
-            monopolDice.ShowResults();
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                Console.WriteLine(monopolDice.ToString());
+            }
+           catch (Exception ex)
+           {
+
+                Console.WriteLine(ex.Message);
+             }
         }
     }
 }
