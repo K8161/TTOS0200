@@ -8,18 +8,30 @@ namespace vko5Kerta2T4
 {
     class Rectangle : Shape
     {
-      //  public double Width;
-     //   public double Heigth;
-        public double AreaValue;
-        public double CircumferenceValue;
-        public override void Area()
+        public override string Name { get; set; }
+        public override double AreaValue { get; }
+        public override double RadiusValue { get; }
+
+        public Rectangle(string name, int heigth, int width)
         {
-            Console.WriteLine("Width = " + Width + " Heigth = " + Heigth + " Area = " + Width * Heigth);
+            Name = name;
+            AreaValue = Area(heigth, width);
+            RadiusValue = Circumference(heigth, width);
         }
-        public override void Circumference()
+
+        public double Area(int heigth, int width)
         {
-            CircumferenceValue = Heigth + Heigth + Width + Width;
-            Console.WriteLine("Circumference = " + CircumferenceValue);
+            return (double)heigth * (double)width;
+        }
+
+        public double Circumference(int heigth, int width)
+        {
+            return ((double)heigth + (double)width) * 2;
+        }
+
+        public override string ToString()
+        {
+            return "Shape " + Name +  " Area = " + AreaValue + " Circumference " + RadiusValue;
         }
     }
 }

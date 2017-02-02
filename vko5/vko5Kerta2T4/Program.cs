@@ -15,23 +15,18 @@ namespace vko5Kerta2T4
         
         static void T4()
         {
-            Shape circle1 = new Circle();
-            circle1.Name = "Testcircle";
-            circle1.RadiusValue = 1;
+            Shapes shapes = new Shapes();
 
-            Shape rectangle1 = new Rectangle();
-            rectangle1.Name = "Testrectangle";
-            rectangle1.Heigth = 15;
-            rectangle1.Width = 15;
+            shapes.Shapelist.Add(new Rectangle("TestSquare", 2, 3));
+            shapes.Shapelist.Add(new Circle("TestBall", 3));
 
-          //  Sh
-
-            circle1.Area();
-            circle1.Circumference();
-
-            rectangle1.Area();
-            rectangle1.Circumference();
-
+            foreach (Shape s in shapes.Shapelist)
+            {
+                Console.WriteLine(s.ToString());
+            }
         }
-    }
 }
+
+}
+    
+

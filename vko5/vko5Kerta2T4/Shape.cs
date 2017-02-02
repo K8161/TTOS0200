@@ -8,10 +8,11 @@ namespace vko5Kerta2T4
 {
     abstract class Shape 
     {
-        public string Name { get; set; }
-        public double RadiusValue;
-        public double Width;
-        public double Heigth;
+        virtual public string Name { get; set; }
+        virtual public double RadiusValue { get; }
+        virtual public double AreaValue { get; }
+        //       virtual public double Width;
+        //     virtual public double Heigth;
 
         public Shape()
         {
@@ -27,7 +28,9 @@ namespace vko5Kerta2T4
             Console.WriteLine("Do something!");
         } */
 
-        public abstract void Area();
-        public abstract void Circumference();
+        virtual public void Area()
+        { }
+        virtual public void Circumference()
+        { }
     }
 }

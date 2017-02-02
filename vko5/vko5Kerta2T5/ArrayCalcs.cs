@@ -6,33 +6,59 @@ using System.Threading.Tasks;
 
 namespace vko5Kerta2T5
 {
-        interface IArrayCalcs
-        {
-            int Sum(int number1, int number2);
-            int Average(int number1, int number2);
-            int Division(int number1, int number2);
-            int Subtract(int number1, int number2);
-        }
 
-        public class ArrayCalcs : IArrayCalcs
+        public class ArrayCalcs
         {
 
-            public int Add(int n1, int n2)
+        public static double Sum(double[] array)
+        {
+            double sumAnswer = 0;
+
+            foreach (double number in array)
             {
-                return n1 + n2;
+                sumAnswer = sumAnswer + number;
             }
-            public int Multiply(int n1, int n2)
-            {
-                return n1 * n2;
-            }
-            public int Division(int n1, int n2)
-            {
-                return n1 / n2;
-            }
-            public int Subtract(int n1, int n2)
-            {
-                return n1 - n2;
-            }
+
+            return sumAnswer;
         }
+
+        public static double Average(double[] array)
+        {
+            double averageAnswer = 0;
+            double sumAnswer = 0;
+
+            foreach (double number in array)
+            {
+                sumAnswer = sumAnswer + number;
+                averageAnswer = sumAnswer / array.Length;
+            }
+
+            return averageAnswer;
+        }
+
+        public static double Min(double[] array)
+        {
+            double Min = 0;
+
+            foreach (double number in array)
+            {
+                Min = array.Min();
+            }
+
+            return Min;
+        }
+
+        public static double Max(double[] array)
+        {
+            double Max = 0;
+
+            foreach (double number in array)
+            {
+                Max = array.Max();
+            }
+
+            return Max;
+        }
+    }
     }
 

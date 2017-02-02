@@ -11,10 +11,9 @@ namespace vko5Kerta2T4
         public List<Shape> Shapelist { get; set; }
      //   List<Shape> Shapelist1 = new List<Shape>();
 
-        public void AddShape(Shape shape)
+        public Shapes ()
         {
-            Shapelist.Add(shape);
-            Console.WriteLine("{0} added!", shape.Name );
+            Shapelist = new List<Shape>();
 
         }
     }

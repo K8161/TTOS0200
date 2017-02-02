@@ -8,16 +8,30 @@ namespace vko5Kerta2T4
 {
     class Circle : Shape
     {
-       // public double RadiusValue;
-        public double AreaValue;
-        public double CircumferenceValue;
-        public override void Area()
+        public override string Name { get; set; }
+        public override double AreaValue { get; }
+        public override double RadiusValue { get; }
+
+        public Circle(string name, int radius)
         {
-            Console.WriteLine("Radius = " + RadiusValue + " Area = " + RadiusValue * Math.PI);
+            Name = name;
+            AreaValue = Area(radius);
+            RadiusValue = Circumference(radius);
         }
-        public override void Circumference()
+
+        public double Area(int radius)
         {
-            Console.WriteLine("Circumference = " + RadiusValue * Math.PI * 2);
+            return (double)radius * radius * Math.PI;
+        }
+
+        public double Circumference(double radius)
+        {
+            return (double)2 * Math.PI * radius;
+        }
+
+        public override string ToString()
+        {
+            return "Shape " + Name + " Area = " + AreaValue + " Circumference " + RadiusValue;
         }
     }
 }
