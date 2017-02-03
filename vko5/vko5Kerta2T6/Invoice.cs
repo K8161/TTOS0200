@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace vko5Kerta2T6
 {
-    class Invoice
+    public class Invoice
     {
         public string CustomerName { get; set; }
         public double InvoiceTotal { get; set; }
@@ -29,7 +29,7 @@ namespace vko5Kerta2T6
         // override base class ToString()-method
         public override string ToString()
         {
-            string s = "Customer: " + CustomerName + "\n";
+            string s = "\nCustomer: " + CustomerName + "\n";
             foreach (Product p in Products)
             {
                 if (s != null) s += "\n-" + p.ToString();

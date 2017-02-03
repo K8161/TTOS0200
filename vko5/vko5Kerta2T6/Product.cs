@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace vko5Kerta2T6
 {
-    class Product
+    public class Product
     {
         public string Name { get; set; }
         public double Price { get; set; }
@@ -17,7 +17,7 @@ namespace vko5Kerta2T6
         public override string ToString()
         {
             Total = Price * Quantity;
-            return " Product " + Name + " " + Price + " Quantity " + Quantity + " Total " + Total;
+            return " Product " + Name + " " + Price + "e  " + Quantity + "pcs  Total " + Total;
         }
     }
 }

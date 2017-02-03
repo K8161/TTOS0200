@@ -16,40 +16,74 @@ namespace vko5Kerta2T5.Tests
         {
             //arrange
             ArrayCalcs calc = new ArrayCalcs();
-            double sumAnswer = 0;
             double[] array = { 1.0, 2.0 };
-            int expected = 3;
+            double expected = 3;
 
             //act
-            int actual = calc.Sum(array);
+            double actual = ArrayCalcs.Sum(array);
 
             //assert
             Assert.AreEqual(expected, actual);
+        }
 
-            //ja toinen testi Add-metodilla
-            a = 0;
-            b = 1;
-            expected = 1;
-            actual = calc.Add(a, b);
+        [TestMethod()]
+        public void EmptySumTest()
+        {
+            //arrange
+            ArrayCalcs calc = new ArrayCalcs();
+            double[] array = { };
+            double expected;
+
+            //act
+            double actual = ArrayCalcs.Sum(array);
+
+            //assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void AverageTest()
         {
-            Assert.Fail();
+            //arrange
+            ArrayCalcs calc = new ArrayCalcs();
+            double[] array = { 1.0, 2.0, 3.0 };
+            double expected = 2.0;
+
+            //act
+            double actual = ArrayCalcs.Average(array);
+
+            //assert
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void MinTest()
         {
-            Assert.Fail();
+            //arrange
+            ArrayCalcs calc = new ArrayCalcs();
+            double[] array = { 1.0, 2.0, 3.0 };
+            double expected = 1.0;
+
+            //act
+            double actual = ArrayCalcs.Min(array);
+
+            //assert
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void MaxTest()
         {
-            Assert.Fail();
+            //arrange
+            ArrayCalcs calc = new ArrayCalcs();
+            double[] array = { 1.0, 2.0, 3.0 };
+            double expected = 3.0;
+
+            //act
+            double actual = ArrayCalcs.Max(array);
+
+            //assert
+            Assert.AreEqual(expected, actual); ;
         }
     }
 }

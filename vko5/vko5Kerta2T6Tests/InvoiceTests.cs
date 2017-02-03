@@ -1,42 +1,56 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using vko5Kerta2T6;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vko5Kerta2T6
+namespace vko5Kerta2T6.Tests
 {
-    class Program
+    [TestClass()]
+    public class InvoiceTests
     {
-        static void Main(string[] args)
+        [TestMethod()]
+        public void InvoiceTest()
         {
-            Shopping();
+            Assert.Fail();
         }
-        static void Shopping()
+
+        [TestMethod()]
+        public void AddProductTest()
         {
-            //create Customer
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void ToStringTest()
+        {
+            //arrange
+            double expected = 3.39;
+
             Invoice customer1 = new Invoice();
             customer1.CustomerName = "Katto Kassinen";
 
-            //create product
             Product shampoo = new Product();
             shampoo.Name = "Dove";
             shampoo.Price = 2.39;
             shampoo.Quantity = 1;
 
-            //create product
             Product banana = new Product();
             banana.Name = "Chiquita Banana";
             banana.Price = 0.20;
             banana.Quantity = 5; ;
 
-            //adding products to invoice
             customer1.AddProduct(shampoo);
             customer1.AddProduct(banana);
 
+            //act
+            customer1.ToString();
+            double actual = customer1.InvoiceTotal;
 
-            Console.WriteLine(customer1.ToString());
-            
+            //assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }

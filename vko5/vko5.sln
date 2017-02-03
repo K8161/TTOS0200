@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko5Kerta2T6", "vko5Kerta2T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko5Kerta2T5Tests", "vko5Kerta2T5Tests\vko5Kerta2T5Tests.csproj", "{748A8041-119F-415E-9BFB-2130CBEFF572}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko5Kerta2T6Tests", "vko5Kerta2T6Tests\vko5Kerta2T6Tests.csproj", "{D5385798-E778-497B-B5D4-4E8A442A0353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{748A8041-119F-415E-9BFB-2130CBEFF572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{748A8041-119F-415E-9BFB-2130CBEFF572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{748A8041-119F-415E-9BFB-2130CBEFF572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5385798-E778-497B-B5D4-4E8A442A0353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5385798-E778-497B-B5D4-4E8A442A0353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5385798-E778-497B-B5D4-4E8A442A0353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5385798-E778-497B-B5D4-4E8A442A0353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
